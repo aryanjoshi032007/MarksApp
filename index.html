@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marks Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📘 Marks Manager</h1>
+
+  <div class="tabs">
+    <button class="tab-button active" data-tab="addSubject">Add Subject</button>
+    <button class="tab-button" data-tab="enterMarks">Enter Marks</button>
+    <button class="tab-button" data-tab="viewMarks">View Marks</button>
+  </div>
+
+  <!-- ADD SUBJECT TAB -->
+  <div id="addSubject" class="tab-content active">
+    <h2>Add Subject</h2>
+    <input type="text" id="subjectName" placeholder="Enter subject name" />
+    <button onclick="addSubject()">Add Subject</button>
+    <p id="subjectMsg"></p>
+
+    <hr />
+
+    <h3>Add Test Type to Subject</h3>
+    <select id="subjectSelect"></select>
+    <input type="text" id="testTypeName" placeholder="Enter test type name" />
+    <button onclick="addTestType()">Add Test Type</button>
+    <p id="testMsg"></p>
+  </div>
+
+  <!-- ENTER MARKS TAB -->
+  <div id="enterMarks" class="tab-content">
+    <h2>Enter Marks</h2>
+    <select id="subjectDropdown"></select>
+    <select id="testDropdown"></select>
+    <input type="number" id="maxMarks" placeholder="Max Marks" />
+    <input type="number" id="scoredMarks" placeholder="Marks Scored" />
+    <button onclick="addMarks()">Add Marks</button>
+    <p id="marksMsg"></p>
+  </div>
+
+  <!-- VIEW MARKS TAB -->
+  <div id="viewMarks" class="tab-content">
+    <h2>View Marks</h2>
+    <div id="marksTableContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
